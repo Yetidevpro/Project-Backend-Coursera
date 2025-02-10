@@ -24,6 +24,9 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+// Register custom middleware here
+app.UseMiddleware<InputValidationMiddleware>();
+
 app.MapControllers();
 
 app.Run();
